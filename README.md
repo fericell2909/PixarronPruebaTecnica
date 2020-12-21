@@ -3,7 +3,8 @@ Repositorio de las Fuentes de la Entrevista Tecnica en la compañia Pixarron
 
 ### Descripcion de Solicitud
 
-    Considera un sistema simple de compra, en el que existen dos tipos de usuario: administrador y cliente. Además, ten en cuenta, que los clientes deben estar registrados para generar órdenes de compra, que dichas compras pueden incluir uno o varios productos, y que el usuario debe tener almacenada una dirección de envió antes de poder generar la compra. 
+    --->  Considera un sistema simple de compra, en el que existen dos tipos de usuario: administrador y
+          cliente. Además, ten en cuenta, que los clientes deben estar registrados para generar órdenes de compra, que dichas compras pueden incluir uno o varios productos, y que el usuario debe tener almacenada una dirección de envió antes de poder generar la compra. 
 
 ### Stack
 

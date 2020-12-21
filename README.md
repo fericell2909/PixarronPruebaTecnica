@@ -1,24 +1,18 @@
 Repositorio de las Fuentes de la Entrevista Tecnica en la compañia Pixarron
-![N|Solid](https://brandfood.com.pe/static/favicon.png)![N|Solid](https://laravel.com/assets/img/components/logo-laravel.svg)![N|Solid](https://vuejs.org/images/icons/apple-icon-57x57.png)
+![N|Solid](https://www.pixarron.com/wp-content/uploads/2020/07/Pixa-logo.png)![N|Solid](https://laravel.com/assets/img/components/logo-laravel.svg)![N|Solid](https://vuejs.org/images/icons/apple-icon-57x57.png)
 
 ### Descripcion de Solicitud
 
-    Realizar una pequeña aplicación en Laravel (mínimo) y VueJS (opcional) que permita crear órdenes en tiempo
-    real usando Laravel Echo
+    Considera un sistema simple de compra, en el que existen dos tipos de usuario: administrador y cliente. Además, ten en cuenta, que los clientes deben estar registrados para generar órdenes de compra, que dichas compras pueden incluir uno o varios productos, y que el usuario debe tener almacenada una dirección de envió antes de poder generar la compra. 
 
 ### Stack
 
-    ---> Se realizo lo solicitado utilizando Laravel , Vue.js , Pusher. 
+    ---> Se realizo lo solicitado utilizando Laravel ( Dashboard - BackEnd), Vue.js ( Front - Client)  
 
 ### Consideraciones
-    --->  Las fuentes se encuentran en el framework laravel version 7
-    --->  Se requiere php version 7.2.5 o superior
     --->  Tener composer instalado ( Administrador de paquetes basado en php)
             Enlace para instalacion de no tenerlo. 
                 https://getcomposer.org/download/
-    ----> Tener una cuenta en pusher. De no poseer crearse una
-           Enlace para crear cuenta en pusher.
-               https://dashboard.pusher.com/accounts/sign_up
      ----> Tener node instalado. De no poseer proceder a instalarlo
             Enlace para node
                https://nodejs.org/es/

@@ -7,7 +7,9 @@ Repositorio de las Fuentes de la Entrevista Tecnica en la compañia Pixarron
           cliente. 
           
     --->  Además, ten en cuenta, que los clientes deben estar registrados para generar órdenes de compra,
-          que dichas compras pueden incluir uno o varios productos, y que el usuario debe tener almacenada una dirección de envió antes de poder generar la compra. 
+          que dichas compras pueden incluir uno o varios productos. 
+    
+    ----> El usuario debe tener almacenada una dirección de envió antes de poder generar la compra. 
 
 ### Stack
 

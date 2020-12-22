@@ -68,8 +68,7 @@ Repositorio de las Fuentes de la Entrevista Tecnica en la compañia Pixarron
     VIII)  Ingresar a la aplicacion en la url proporcionada por artisan serve.
 
     IX) En el carpeta readme_files/backup/backup.sql ... se proporcion un backup si es que no desea ejecutar migraciones.
-
-
+    
     X) Usuarios 
         
          email:  info@devmarcoestrada.com   
@@ -80,7 +79,7 @@ Repositorio de las Fuentes de la Entrevista Tecnica en la compañia Pixarron
          pass:  secret
          rol:   administrador
          
-    
+    XI) api_register.postman_collection.json --- archivos para testing de las api en postman.
 
 ### Imagenes
 

@@ -26,23 +26,23 @@ Repositorio de las Fuentes de la Entrevista Tecnica en la compañia Pixarron
  
     I) Clonar el repositorio
  
-        git clone https://github.com/fericell2909/BrandFoodPruebaTecnica.git
+        git clone https://github.com/fericell2909/PixarronPruebaTecnica.git
         
     II) Ubicarse en la raiz del proyecto y ejecutar
         
         composer install
     
     III) Crear el archivo :  .env  ( Puede tomar como base .env.example) el cual
-         ya viene con credenciales de pusher y base de datos. 
+         ya viene con credenciales. Si es que no sea ejecutar migraciones 
         
-    III) Crear un base de datos . Por ejemplo : testbrandfood y asignar
+    III) Crear un base de datos . Por ejemplo : desafiopixarron y asignar
          un usuario con permisos globales en esta base de datos y reemplazar
          en los parametros en el archivo .env ( creado en el paso III)
          
             DB_CONNECTION=mysql
             DB_HOST=127.0.0.1
             DB_PORT=3306
-            DB_DATABASE=testbrandfood
+            DB_DATABASE=desafiopixarron
             DB_USERNAME=root
             DB_PASSWORD=
     
@@ -50,21 +50,14 @@ Repositorio de las Fuentes de la Entrevista Tecnica en la compañia Pixarron
     
           php artisan migrate.
     
-    V) Ingresar las Credenciales creadas en la cuenta de pusher en el archivo .env
-    
-        BROADCAST_DRIVER=pusher
-        PUSHER_APP_ID=1041013
-        PUSHER_APP_KEY=575fe64b2d524f039927
-        PUSHER_APP_SECRET=ad090699776a228b3ebd
-        PUSHER_APP_CLUSTER=us2
-        MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
-        MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
         
     V) Ejecutar el comando de npm    
         
         npm install
     
-    VI) Abrir dos consolas en la misma ubicacion raiz del proyecto.
+    VI) Ejecutar el comando de artisan de migraciones    
+        
+        php artisan migrate
     
     VII) Ejecutar los siguientes comandos
       
@@ -73,15 +66,29 @@ Repositorio de las Fuentes de la Entrevista Tecnica en la compañia Pixarron
          npm run watch   ------>  para los archivos de vue.js
          
     VIII)  Ingresar a la aplicacion en la url proporcionada por artisan serve.
+
+    IX) En el carpeta readme_files/backup/backup.sql ... se proporcion un backup si es que no desea ejecutar migraciones.
+
+
+    X) Usuarios 
+        
+         email:  info@devmarcoestrada.com   
+         pass:  secret
+         rol:   cliente
+
+         email:  admin@devmarcoestrada.com   
+         pass:  secret
+         rol:   administrador
+         
     
 
 ### Imagenes
 
-Inicio
-<img src="/imagesrepo/inicio.png" alt="Bienvenido"/>
+Tienda
+<img src="/readme_files/images/captura_tienda.PNG" alt="Tienda"/>
 
-Login
-<img src="/imagesrepo/login.png" alt="Iniciar Sesion"/>
+Tienda Checkout
+<img src="/readme_files/images/captura_tienda.PNG" alt="Tienda CheckOut"/>
 
-Aplicacion
-<img src="/imagesrepo/aplicacion.png" alt="Aplicacion"/>
+DashBoard
+<img src="/readme_files/images/captura_dashboard_admin.PNG" alt="DashBoard"/>

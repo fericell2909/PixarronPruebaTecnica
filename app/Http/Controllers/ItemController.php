@@ -36,4 +36,23 @@ class ItemController extends Controller
             return redirect('/');
         }
     }
+
+    public function paginate(Request $request)
+    {
+        $items = Items::latest()->paginate(9);
+
+        $response = [
+            'pagination' => [
+                'total' => $items->total(),
+                'per_page' => $items->perPage(),
+                'current_page' => $items->currentPage(),
+                'last_page' => $items->lastPage(),
+                'from' => $items->firstItem(),
+                'to' => $items->lastItem()
+            ],
+            'data' => $items
+        ];
+
+        return response()->json($response);
+    }
 }

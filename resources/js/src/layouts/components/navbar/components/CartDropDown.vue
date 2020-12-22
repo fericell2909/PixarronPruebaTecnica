@@ -16,9 +16,9 @@
               <ul class="bordered-items">
                   <li
                     v-for="item in cartItems"
-                    :key="item.objectID"
+                    :key="item.uuid"
                     class="vx-row no-gutter cart-item cursor-pointer"
-                    @click="$router.push({name: 'ecommerce-item-detail-view', params: {item_id: item.objectID }}).catch(() => {})">
+                    >
 
                       <!-- IMG COL -->
                       <div class="vx-col w-1/5 item-img-container bg-white flex items-center justify-center">
@@ -39,7 +39,7 @@
               </component>
               <div
                 class=" checkout-footer fixed bottom-0 rounded-b-lg text-primary font-semibold w-full p-2 text-center border border-b-0 border-l-0 border-r-0 border-solid d-theme-border-grey-light cursor-pointer"
-                @click="$router.push('/apps/eCommerce/checkout').catch(() => {})">
+                @click="$router.push('/checkout').catch(() => {})">
 
                 <span class="flex items-center justify-center">
                   <feather-icon icon="ShoppingCartIcon" svgClasses="h-4 w-4" />
@@ -69,22 +69,45 @@ export default {
       settings: { // perfectscrollbar settings
         maxScrollbarLength: 60,
         wheelSpeed: .60,
-        is_signed: false
-      }
+        is_signed: false,
+      },
+       items: [],
     }
+  },
+  mounted(){
+      this.getitems();
   },
   computed: {
     // CART DROPDOWN
     cartItems () {
+
       return this.$store.state.eCommerce.cartItems.slice().reverse()
+       // return this.items;
     },
     scrollbarTag () {
       return this.$store.getters.scrollbarTag
     }
   },
+  mounted(){
+      this.getitems();
+  },
   methods: {
+
+    getitems(){
+
+         this.$http.get("/api/auth/cart/getItems/" + localStorage.getItem('uuid')).then(response => {
+             this.$store.dispatch('eCommerce/setItemsCart', response.data);
+            });
+    },
     removeItemFromCart (item) {
       this.$store.dispatch('eCommerce/toggleItemInCart', item)
+            this.$vs.notify({
+            title: 'Exito',
+            text: 'Articulo Eliminado Correctamente',
+            color: 'success',
+            iconPack: 'feather',
+            icon: 'icon-alert-circle'
+            })
     },
     authenticated () {
         if(this.$store.state.AppActiveUser != null ) {

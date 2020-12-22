@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
+use Validator;
 
 class AuthController extends Controller
 {
@@ -15,28 +16,50 @@ class AuthController extends Controller
      */
     public function signUp(Request $request)
     {
-        $request->validate([
+
+        $validation_rules = [
             'name' => 'required|string',
             'email' => 'required|string|email|unique:users',
             'password' => 'required|string'
-        ]);
+        ];
 
-        $uuid  = Str::uuid();
+        $validator = Validator::make($request->all(), $validation_rules);
 
-         User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => bcrypt($request->password),
-            'uuid' => $uuid
-        ]);
+        if ($validator->fails()) {
 
-        $user = User::where('uuid',$uuid)->first();
+            return response()->json(['status' => false , 'message' => 'Validacion Incorrecta' ,'errors' => $validator->errors()], 201);
 
-        $user->assignRole('client');
+        } else {
 
-        return response()->json([
-            'message' => 'Usuario Creado Correctamente.'
-        ], 201);
+            $uuid  = Str::uuid();
+
+            User::create([
+               'name' => $request->name,
+               'email' => $request->email,
+               'password' => bcrypt($request->password),
+               'uuid' => $uuid
+           ]);
+
+           $user = User::where('uuid',$uuid)->first();
+
+           $user->assignRole('client');
+
+           $tokenResult = $user->createToken('Personal Access Token');
+
+           $token = $tokenResult->token;
+           $token->expires_at = Carbon::now()->addWeeks(2);
+           $token->save();
+
+           return response()->json([
+               'access_token' => $tokenResult->accessToken,
+               'token_type' => 'Bearer',
+               'expires_at' => Carbon::parse($token->expires_at)->toDateTimeString(),
+               'message' => 'Usuario Creado Correctamente.',
+               'status' => true
+           ]);
+
+        }
+
     }
 
     /**
@@ -68,7 +91,9 @@ class AuthController extends Controller
         return response()->json([
             'access_token' => $tokenResult->accessToken,
             'token_type' => 'Bearer',
-            'expires_at' => Carbon::parse($token->expires_at)->toDateTimeString()
+            'expires_at' => Carbon::parse($token->expires_at)->toDateTimeString(),
+            'message' => 'Usuario Autenticado',
+               'status' => true
         ]);
     }
 
@@ -80,7 +105,7 @@ class AuthController extends Controller
         $request->user()->token()->revoke();
 
         return response()->json([
-            'message' => 'Successfully logged out'
+            'message' => 'Login Correcto'
         ]);
     }
 

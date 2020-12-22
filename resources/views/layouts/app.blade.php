@@ -23,6 +23,9 @@
     <!-- Select2 -->
     <!--<link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />-->
     <link type="text/css" href="{{ asset('custom') }}/css/select2.min.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+
     <!-- Jasny File Upload -->
   <!--<link type="text/css" href="{{ asset('fileupload') }}/fileupload.css" rel="stylesheet">-->
     <!-- Latest compiled and minified CSS -->
@@ -72,9 +75,9 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/4.0.0/js/jasny-bootstrap.min.js"></script>
     <!-- Custom js -->
-    <script src="{{ asset('custom') }}/js/orders.js"></script>
+    {{-- <script src="{{ asset('custom') }}/js/orders.js"></script>
     <!-- Custom js -->
-    <script src="{{ asset('custom') }}/js/mresto.js"></script>
+    <script src="{{ asset('custom') }}/js/mresto.js"></script> --}}
     <!-- AJAX -->
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>-->
 

@@ -28,4 +28,17 @@ class AddressController extends Controller
         }
 
     }
+
+    public function address_user($uuid){
+
+        $user = User::where('uuid',$uuid)->with('addresses')->first();
+
+        if($user) {
+            return response()->json($user);
+        } else {
+            return [];
+        }
+
+    }
+
 }

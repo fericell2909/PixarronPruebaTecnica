@@ -1,0 +1,161 @@
+[
+    {
+        "image":"https://devmarcoestrada.com/assets/proyectos/tienda_taglio.PNG",
+        "name": "Caprese Salad (350gr)",
+        "description": "peeled tomatoes, mozzarella salad, Genovese pesto",
+        "price": "9.99"
+      }
+      ,
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/tienda_joeburguer.png",
+        "name": "Caesar Salad (400g)",
+        "description": "iceberg, bacon, chicken breast, parmesan, Caesar sauce",
+        "price": "10.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/wordpress_casascruz.PNG",
+        "name": "Salad Napoli (350g)",
+        "description": "iceberg, arugula, cherry tomatoes, mozzarella salad, salad dressing: (Extra Virgin olive oil, Modena balsamic vinegar, honey and mustard)",
+        "price": "9.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/wordpress_costabella.PNG",
+        "name": "Green tuna salad (400g)",
+        "description": "lettuce, cucumbers, tuna, olive, corn, lemon, salad dressing: (Extra Virgin olive oil, Modena balsamic vinegar, honey and mustard)",
+        "price": "9.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Green salad (350g)",
+        "description": "lettuce, cucumbers, radishes, onions, egg, salad dressing: (Extra Virgin olive oil, Modena balsamic vinegar, honey and mustard)",
+        "price": "7.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Greek Salad (500g)",
+        "description": "tomatoes, cucumbers, green pepper, red onion, olive, feta cheese, extra virgin olive oil",
+        "price": "9.99"
+      }
+      ,
+     {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Mozzarella Pizza",
+        "description": "tomato sauce, mozzarella sabelli, cherry tomatoes, olives, pesto sauce, extra virgin olive oil",
+        "price": "10.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Prosciutto crust pizza",
+        "description": "tomato sauce, mozzarella sabelli, prosciutto, arugula, extra virgin olive oil",
+        "price": "14.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Pepperoni Pizza",
+        "description": "tomato sauce, mozzarella Sabelli, Calabro salad (spicy), extra virgin olive oil",
+        "price": "14.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Carriola Pizza",
+        "description": "tomato sauce, mozzarella sabelli, bacon, red onion, olives, extra virgin olive oil",
+        "price": "14.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Perugia Pizza",
+        "description": "tomato sauce, mozzarella sabelli, chicken fillet, red onion, fresh peppers, extra virgin olive oil",
+        "price": "14.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Pizza Napoli",
+        "description": "tomato sauce, mozzarella sabelli, ham, cherry tomatoes, emmental, arugula, extra virgin olive oil",
+        "price": "14.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Margarita Pizza",
+        "description": "tomato sauce, mozzarella Sabelli, extra virgin olive oil",
+        "price": "10.49"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Combo Pizza 50/50 (70cm)",
+        "description": "tomato sauce, mozzarella Sabelli, extra virgin olive oil",
+        "price": "39.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Capricciosa Pizza",
+        "description": "tomato sauce, mozzarella sabelli, ham, fresh mushrooms, extra virgin olive oil",
+        "price": "14.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Quattro Formaggi Pizza",
+        "description": "cream (animal), mozzarella Sabelli, blue cheese, emmental, parmesan, extra virgin olive oil",
+        "price": "14.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Marco Polo Pizza",
+        "description": "tomato sauce, Sabelli mozzarella, chicken fillet, smoked cheese, corn, extra virgin olive oil",
+        "price": "14.99"
+      },
+     {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Spaghetti Carbonara (450g)",
+        "description": "fresh pasta, cream (animal), onion, pancakes (smoked bacon), egg, parmesan",
+        "price": "11.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Spaghetti Formaggi (450g)",
+        "description": "fresh pasta, cream (animal), blue cheese, emmental, parmesan",
+        "price": "11.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Tagliatelle with mushrooms (400g)",
+        "description": "fresh pasta, cream (animal), mushrooms, parmesan",
+        "price": "11.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Chicken risotto (450g)",
+        "description": "Arborio rice, chicken breast, onion, parmesan",
+        "price": "11.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Risotto with mushrooms (450g)",
+        "description": "Arborio rice, mushrooms, garlic, parmesan",
+        "price": "11.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Tagliatelle with Bolognese Sauce (400g)",
+        "description": "fresh pasta, bolognese sauce, parmesan",
+        "price": "11.99"
+      }
+    ,
+    {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Lasagna Classic (450g)",
+        "description": "Bolognese sauce, mozzarella Sabelli",
+        "price": "11.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Napoli Lasagna (450g)",
+        "description": "chicken fillet, cream (animal), corn, blue cheese, mozzarella Sabelli",
+        "price": "11.99"
+      },
+      {
+        "image":"https://devmarcoestrada.com/assets/proyectos/web_marcoestrada.PNG",
+        "name": "Lasagna Formagio (450g)",
+        "description": "smoked cheese, blue cheese, emmental, cream (animal), mozzarella Sabelli",
+        "price": "11.99"
+      }
+]

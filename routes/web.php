@@ -44,6 +44,6 @@ Route::group(['prefix' => 'dashboard'], function () {
 
 
 });
-
+// fronEnd vue.js
 Route::get('/{any}', 'ApplicationController')->where('any', '.*');
 

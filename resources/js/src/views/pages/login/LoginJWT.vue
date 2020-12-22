@@ -31,6 +31,7 @@
       <vs-button  type="border" @click="registerUser">Registrarse</vs-button>
       <vs-button :disabled="!validateForm" @click="loginJWT">Iniciar Sesión</vs-button>
     </div>
+    <a href="/" class="ml-2" style="cursor: pointer;">Ir a Tienda</a>
   </div>
 </template>
 <style>
@@ -48,8 +49,8 @@
 export default {
   data () {
     return {
-      email: 'admin@admin.com',
-      password: 'adminadmin',
+      email: 'info@devmarcoestrada.com',
+      password: 'secret',
       checkbox_remember_me: false
     }
   },
@@ -67,8 +68,8 @@ export default {
         // this.$vs.loading.close()
 
         this.$vs.notify({
-          title: 'Login Attempt',
-          text: 'You are already logged in!',
+          title: 'Acceso Autorizado',
+          text: 'Usted ya ha ingresado!',
           iconPack: 'feather',
           icon: 'icon-alert-circle',
           color: 'warning'

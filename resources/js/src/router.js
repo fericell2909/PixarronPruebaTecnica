@@ -68,7 +68,7 @@ const router = new Router({
                     }
                 },
                 {
-                    path: '/apps/eCommerce/item/:item_id',
+                    path: '/ver-item/:item_id',
                     name: 'ecommerce-item-detail-view',
                     component: () => import('@/views/eCommerce/ECommerceItemDetailView.vue'),
                     meta: {

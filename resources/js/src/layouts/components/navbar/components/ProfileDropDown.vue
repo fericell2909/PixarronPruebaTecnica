@@ -25,12 +25,10 @@
                 <ul style="min-width: 9rem">
                     <li
                         class="flex py-2 px-4 cursor-pointer hover:bg-primary hover:text-white"
-                         @click="dashboard"
-                    >
+                         @click="dashboard">
                         <feather-icon icon="UserIcon" svgClasses="w-4 h-4" />
-                        <span class="ml-2">Perfil</span>
+                        <span class="ml-2">Ir a Tablero</span>
                     </li>
-
 
                     <vs-divider class="m-1" />
 
@@ -94,11 +92,13 @@ export default {
     },
     methods: {
         logout() {
-            console.log("cerrando session");
+            //console.log("cerrando session");
             localStorage.removeItem("userInfo");
-            // This is just for demo Purpose. If user clicks on logout -> redirect
-            this.$router.push("/").catch(() => {});
-            //router.push('/')
+            localStorage.removeItem('uuid');
+            localStorage.removeItem('accessToken')
+
+            location.href="/";
+
         },
         dashboard(){
             location.href = '/dashboard/user/'+  localStorage.getItem('uuid');

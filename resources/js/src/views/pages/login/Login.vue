@@ -8,12 +8,12 @@
           <div class="vx-row no-gutter justify-center items-center">
 
             <div class="vx-col hidden lg:block lg:w-1/2">
-              <img src="@assets/images/pages/login.png" alt="login" class="mx-auto">
+              <img src="@assets/images/login/acceso.jpg" alt="Acceso al Sistema" class="mx-auto">
             </div>
 
             <div class="vx-col sm:w-full md:w-full lg:w-1/2 d-theme-dark-bg">
               <div class="px-8 pt-8 login-tabs-container">
-                <a href="/" class="ml-2">Ir a Tienda</a>
+
                 <div class="vx-card__title mb-4">
                   <h4 class="mb-4">Iniciar Sesión</h4>
                   <p>Bienvenido, por favor ingrese sus credenciales.</p>
@@ -42,6 +42,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 
 .login-tabs-container {
   min-height: 505px;

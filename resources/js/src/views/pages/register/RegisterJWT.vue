@@ -31,18 +31,6 @@
       v-model="password"
       class="w-full mt-6" />
 
-    <vs-input
-      type="password"
-      v-validate="'min:6|max:10|confirmed:password'"
-      data-vv-validate-on="blur"
-      data-vv-as="password"
-      name="confirmar Contraseña"
-      label-placeholder="Confirm Password"
-      placeholder="Confirmar Password"
-      v-model="confirm_password"
-      class="w-full mt-6" />
-
-    <vs-checkbox v-model="isTermsConditionAccepted" class="mt-6">Acepto los Terminos y Condiciones.</vs-checkbox>
     <vs-button  type="border" :to="{ name: 'page-login' }" class="mt-6">Iniciar Sesion</vs-button>
     <vs-button class="float-right mt-6" @click="registerUserJWt" :disabled="!validateForm">Registrarse</vs-button>
   </div>
@@ -66,7 +54,7 @@ export default {
   },
   computed: {
     validateForm () {
-      return  this.displayName !== '' && this.email !== '' && this.password !== '' && this.confirm_password !== '' && this.isTermsConditionAccepted === true
+      return  this.displayName !== '' && this.email !== '' && this.password !== ''
     }
   },
   methods: {
@@ -78,8 +66,8 @@ export default {
         // this.$vs.loading.close()
 
         this.$vs.notify({
-          title: 'Login Attempt',
-          text: 'You are already logged in!',
+          title: 'Usuario con Acceso',
+          text: 'Usted ya esta logueado!',
           iconPack: 'feather',
           icon: 'icon-alert-circle',
           color: 'warning'
@@ -97,8 +85,7 @@ export default {
         userDetails: {
           displayName: this.displayName,
           email: this.email,
-          password: this.password,
-          confirmPassword: this.confirm_password
+          password: this.password
         },
         notify: this.$vs.notify
       }

@@ -7,15 +7,15 @@ import colors from "@/../themeConfig.js"
 // Helper
 // /////////////////////////////////////////////
 
-// *From Auth - Data will be received from auth provider
-const userDefaults = {
-  uid         : 0,          // From Auth
-  displayName : "John Doe", // From Auth
-  about       : "Dessert chocolate cake lemon drops jujubes. Biscuit cupcake ice cream bear claw brownie brownie marshmallow.",
-  photoURL    : require("@assets/images/portrait/small/avatar-s-11.jpg"), // From Auth
-  status      : "online",
-  userRole    : "admin"
-}
+// // *From Auth - Data will be received from auth provider
+// const userDefaults = {
+//   uid         : 0,          // From Auth
+//   displayName : "Amen", // From Auth
+//   about       : "Hello",
+//   photoURL    : require("@assets/images/portrait/small/avatar-default.jpg"), // From Auth
+//   status      : "online",
+//   userRole    : "admin"
+// }
 
 
 // Check if device is touch device

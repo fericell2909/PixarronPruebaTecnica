@@ -5,10 +5,10 @@
         <ul class="navbar-nav align-items-center d-none d-md-flex">
 
             <li class="nav-item dropdown">
-                <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link pr-0"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: pointer;"  onclick="localStorage.removeItem('userInfo'); localStorage.removeItem('uuid'); localStorage.removeItem('accessToken'); location.href='/';">
                     <div class="media align-items-center">
                         <span class="avatar avatar-sm rounded-circle">
-                            <img id="profile-image-nav" alt="..." src="https://www.gravatar.com/avatar/owner@example.com">
+                            <img id="profile-image-nav" alt="..." src="https://www.gravatar.com/avatar/owner@example.com"  onclick="localStorage.removeItem('userInfo'); localStorage.removeItem('uuid'); localStorage.removeItem('accessToken'); location.href='/';">
                         </span>
                         <div class="media-body ml-2 d-none d-lg-block">
                         <span class="mb-0 text-sm  font-weight-bold">Cerrar Sesión</span>

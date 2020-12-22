@@ -1,7 +1,7 @@
 <template>
   <div id="ecommerce-wishlist-demo">
         <div class="items-grid-view vx-row match-height" v-if="wishListitems.length" appear>
-            <div class="vx-col lg:w-1/4 md:w-1/3 sm:w-1/2 w-full" v-for="item in wishListitems" :key="item.objectID">
+            <div class="vx-col lg:w-1/4 md:w-1/3 sm:w-1/2 w-full" v-for="item in wishListitems" :key="item.uuid">
 
                 <item-grid-view :item="item">
 
@@ -24,7 +24,7 @@
                                 @click="cartButtonClicked(item)">
                                 <feather-icon icon="ShoppingBagIcon" svgClasses="h-4 w-4" />
 
-                                <span class="text-sm font-semibold ml-2" v-if="isInCart(item.objectID)">VIEW IN CART</span>
+                                <span class="text-sm font-semibold ml-2" v-if="isInCart(item.uuid)">VIEW IN CART</span>
                                 <span class="text-sm font-semibold ml-2" v-else>MOVE TO CART</span>
                             </div>
                         </div>
@@ -64,7 +64,7 @@ export default {
       this.$store.dispatch('eCommerce/toggleItemInWishList', item)
     },
     cartButtonClicked (item) {
-      if (this.isInCart(item.objectID)) this.$router.push('/apps/eCommerce/checkout').catch(() => {})
+      if (this.isInCart(item.uuid)) this.$router.push('/apps/eCommerce/checkout').catch(() => {})
       else {
         this.additemInCart(item)
         this.removeItemFromWishList(item)

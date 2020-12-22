@@ -228,25 +228,63 @@ export default {
   },
   registerUserJWT ({ commit }, payload) {
 
-    const { displayName, email, password, confirmPassword } = payload.userDetails
+    const { displayName, email, password } = payload.userDetails
 
     return new Promise((resolve, reject) => {
 
-      // Check confirm password
-      if (password !== confirmPassword) {
-        reject({message: 'Password doesn\'t match. Please try again.'})
-      }
-
       jwt.registerUser(displayName, email, password)
         .then(response => {
-          // Redirect User
-          router.push(router.currentRoute.query.to || '/')
+            if (response.data.access_token) {
 
-          // Update data in localStorage
-          localStorage.setItem('accessToken', response.data.accessToken)
-          commit('UPDATE_USER_INFO', response.data.userData, {root: true})
 
-          resolve(response)
+                // Set accessToken
+                localStorage.setItem('accessToken', response.data.access_token)
+
+                // Set bearer token in axios
+                commit('SET_BEARER', response.data.accessToken)
+
+
+                jwt.getUser(response.data.access_token).then(response => {
+
+                    if(response.data.id){
+
+                        const userDefaults = {
+                            uid         : response.data.id,
+                            displayName : response.data.name, // From Auth
+                            email       : response.data.email,
+                            about       : "Hello",
+                            photoURL    : require("@assets/images/portrait/small/avatar-default.jpg"), // From Auth
+                            status      : "online",
+                            userRole    : "user",
+                            uuid :  response.data.uuid
+                          }
+
+                          localStorage.setItem("userInfo",JSON.stringify(userDefaults));
+                          localStorage.setItem('uuid', response.data.uuid);
+
+                        commit('UPDATE_USER_INFO', userDefaults, {root: true})
+
+                        payload.notify({
+                            title: 'success',
+                            text: 'Registro Correcto',
+                            iconPack: 'feather',
+                            icon: 'icon-alert-circle',
+                            color: 'warning'
+                          });
+
+                        location.href="/";
+                    }
+                });
+            } else {
+                payload.notify({
+                    title: 'Error',
+                    text: 'Registro Incorrecto',
+                    iconPack: 'feather',
+                    icon: 'icon-alert-circle',
+                    color: 'warning'
+                  });
+
+            }
         })
         .catch(error => { reject(error) })
     })

@@ -58,11 +58,11 @@ export default {
       })
   },
   registerUser (name, email, pwd) {
-    return axios.post('/api/auth/register', {
-      displayName: name,
-      email,
+    return axios.post('/api/auth/signup', {
+      name: name,
+      email:email,
       password: pwd
-    })
+    });
   },
   refreshToken () {
     return axios.post('/api/auth/refresh-token', {accessToken: localStorage.getItem('accessToKen')})

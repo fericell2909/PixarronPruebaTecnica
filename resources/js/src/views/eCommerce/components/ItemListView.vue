@@ -1,11 +1,3 @@
-<!-- =========================================================================================
-    File Name: ItemListView.vue
-    Description: Item Component - List VIew
-    ----------------------------------------------------------------------------------------
-    Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
-      Author: Pixinvent
-    Author URL: http://www.themeforest.net/user/pixinvent
-========================================================================================== -->
 
 <template>
     <vx-card class="list-view-item overflow-hidden" v-on="$listeners">
@@ -34,20 +26,14 @@
 
                     <div class="p-4 flex flex-col w-full">
 
-                        <div class="text-warning flex self-end border border-solid border-warning py-1 px-2 rounded">
-                            <span class="text-sm mr-1">{{ item.rating }}</span>
-                            <feather-icon icon="StarIcon" svgClasses="h-4 w-4" />
-                        </div>
-
                         <div class="my-6">
-                            <h5 class="font-bold text-center">${{ item.price }}</h5>
+                            <h5 class="font-bold text-center">S/. {{ item.price }}</h5>
                             <span class="text-grey flex items-start justify-center mt-1" v-if="item.free_shipping">
                                 <feather-icon icon="ShoppingCartIcon" svgClasses="w-4 h-4" />
-                                <span class="text-sm ml-2">Free Shipping</span>
+                                <span class="text-sm ml-2">Envío Gratis</span>
                             </span>
                         </div>
 
-                        <!-- SLOT: ACTION BUTTONS -->
                         <slot name="action-buttons" />
                     </div>
                 </div>
@@ -81,10 +67,10 @@ export default{
       this.$store.dispatch('eCommerce/additemInCart', item)
     },
     cartButtonClicked (item) {
-      this.isInCart(item.objectID) ? this.$router.push('/apps/eCommerce/checkout').catch(() => {}) : this.additemInCart(item)
+      this.isInCart(item.uuid) ? this.$router.push('/apps/eCommerce/checkout').catch(() => {}) : this.additemInCart(item)
     },
     navigate_to_detail_view () {
-      this.$router.push({name: 'ecommerce-item-detail-view', params: {item_id: this.item.objectID }})
+      this.$router.push({name: 'ecommerce-item-detail-view', params: {item_id: this.item.uuid }})
         .catch(() => {})
     }
   }

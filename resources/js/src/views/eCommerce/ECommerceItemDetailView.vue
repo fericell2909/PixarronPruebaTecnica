@@ -17,7 +17,7 @@
       </span>
     </vs-alert>
 
-    <vx-card v-if="item_data" :key="item_data.objectID">
+    <vx-card v-if="item_data" :key="item_data.uuid">
 
 
       <template slot="no-body">
@@ -111,7 +111,7 @@
                         class="mr-4 mb-4"
                         icon-pack="feather"
                         icon="icon-shopping-cart"
-                        v-if="!isInCart(item_data.objectID)"
+                        v-if="!isInCart(item_data.uuid)"
                         @click="toggleItemInCart(item_data)">
                         ADD TO CART
                       </vs-button>
@@ -128,7 +128,7 @@
 
                       <!-- Wishlist Button -->
                       <vs-button
-                        v-if="isInWishList(item_data.objectID)"
+                        v-if="isInWishList(item_data.uuid)"
                         key="filled"
                         class="mb-4"
                         icon-pack="feather"
@@ -207,7 +207,7 @@
             <p>People also search for this items</p>
           </div>
           <swiper :options="swiperOption" :dir="$vs.rtl ? 'rtl' : 'ltr'" :key="$vs.rtl" class="related-product-swiper px-12 py-6">
-            <swiper-slide v-for="item in related_items" :key="item.objectId" class="p-6 rounded cursor-pointer">
+            <swiper-slide v-for="item in related_items" :key="item.uuid" class="p-6 rounded cursor-pointer">
 
               <!-- Item Heading -->
               <div class="item-heading mb-4">
@@ -302,7 +302,7 @@ export default{
           'price'      : 229,
           'image'      : 'https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/01.png',
           'rating'     : 4,
-          'objectID'   : '5546604'
+          'uuid'   : '5546604'
         },
         {
           'name'       : 'Beats by Dr. Dre - Powerbeats2 Wireless Earbud Headphones - Black/Red',
@@ -310,7 +310,7 @@ export default{
           'price'      : 199.99,
           'image'      : 'https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/08.png',
           'rating'     : 4,
-          'objectID'   : '5565002'
+          'uuid'   : '5565002'
         },
         {
           'name'       : 'Amazon - Fire TV Stick with Alexa Voice Remote - Black',
@@ -318,7 +318,7 @@ export default{
           'price'      : 39.99,
           'image'      : 'https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/03.png',
           'rating'     : 4,
-          'objectID'   : '5477500'
+          'uuid'   : '5477500'
         },
         {
           'name'       : 'Apple - Apple Watch Nike+ 42mm Silver Aluminum Case Silver/Volt Nike Sport Band - Silver Aluminum',
@@ -326,7 +326,7 @@ export default{
           'price'      : 399,
           'image'      : 'https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/07.png',
           'rating'     : 4,
-          'objectID'   : '5547700'
+          'uuid'   : '5547700'
         },
         {
           'name'       : 'Google - Chromecast Ultra - Black',
@@ -334,7 +334,7 @@ export default{
           'price'      : 69.99,
           'image'      : 'https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/05.png',
           'rating'     : 4,
-          'objectID'   : '5578628'
+          'uuid'   : '5578628'
         },
         {
           'name'       : 'Beats by Dr. Dre - Beats EP Headphones - White',
@@ -342,7 +342,7 @@ export default{
           'price'      : 129.99,
           'image'      : 'https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/02.png',
           'rating'     : 4,
-          'objectID'   : '5577781'
+          'uuid'   : '5577781'
         },
         {
           'name'       : 'LG - 40" Class (39.5" Diag.) - LED - 1080p - HDTV - Black',
@@ -350,14 +350,14 @@ export default{
           'price'      : 279.99,
           'image'      : 'https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/products/09.png',
           'rating'     : 4,
-          'objectID'   : '5613404'
+          'uuid'   : '5613404'
         }
       ]
     }
   },
   computed: {
     item_qty () {
-      const item = this.$store.getters['eCommerce/getCartItem'](this.item_data.objectID)
+      const item = this.$store.getters['eCommerce/getCartItem'](this.item_data.uuid)
       return Object.keys(item).length ? item.quantity : 1
     },
     itemColor () {

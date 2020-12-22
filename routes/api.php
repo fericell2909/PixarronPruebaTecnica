@@ -19,8 +19,21 @@ Route::group(['prefix' => 'auth'], function () {
     Route::post('login', 'AuthController@login');
     Route::post('signup', 'AuthController@signUp');
 
+    Route::post('cart/increment/{uuid}','CartController@increment');
+    Route::post('cart/decrement/{uuid}','CartController@decrement');
+    Route::post('cart/deletecartitem/{uuid}','CartController@deletecartitem');
+    Route::post('cart/addcartitem/{uuid}','CartController@addcartitem');
+    Route::get('cart/getItems/{uuid}','CartController@getItems');
+
     Route::group(['middleware' => 'auth:api'], function() {
         Route::get('logout', 'AuthController@logout');
         Route::get('user', 'AuthController@user');
+        Route::post('order/{uuid}', 'OrderController@register_order');
+
+
     });
 });
+
+Route::get('/items','ItemController@paginate');
+
+Route::get('/address/{uuid}','AddressController@address_user');

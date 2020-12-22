@@ -37,3 +37,5 @@ Route::group(['prefix' => 'auth'], function () {
 Route::get('/items','ItemController@paginate');
 
 Route::get('/address/{uuid}','AddressController@address_user');
+
+Route::post('/posts','PostController@paginate');

@@ -62,8 +62,8 @@ Repositorio de las Fuentes de la Entrevista Tecnica en la compañia Pixarron
     VII) Ejecutar los siguientes comandos
       
          php artisan serve    ----> localhost de web en Laravel
-         
-         npm run watch   ------>  para los archivos de vue.js
+
+         npm run dev /  npm run prod npm run watch  ------>  para los archivos de vue.js
          
     VIII)  Ingresar a la aplicacion en la url proporcionada por artisan serve.
 

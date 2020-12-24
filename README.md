@@ -87,7 +87,7 @@ Tienda
 <img src="/readme_files/images/captura_tienda.PNG" alt="Tienda"/>
 
 Tienda Checkout
-<img src="/readme_files/images/captura_tienda.PNG" alt="Tienda CheckOut"/>
+<img src="/readme_files/images/captura_tienda_checkout.PNG" alt="Tienda CheckOut"/>
 
 DashBoard
 <img src="/readme_files/images/captura_dashboard_admin.PNG" alt="DashBoard"/>
